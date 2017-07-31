@@ -1,0 +1,23 @@
+<snippet>
+    <content><![CDATA[
+\$nids = \Drupal::entityQuery('node')
+  ->condition('type', 'publication')
+  ->condition('status', NODE_PUBLISHED)
+  ->condition('promote', NODE_PROMOTED)
+  // Choisir un chemin "long" quand c'est un champ à plusieurs valeurs genre date range : field_date.value1 ou field_date.value2
+  ->condition('field_public', \$tids, 'IN')
+  ->condition('field_articles', \$nid)
+  ->condition('field_date_debut_fin', gmdate('Y-m-d'), '<=')
+  ->sort('created', 'DESC')
+  ->range(0, 10)
+  ->pager(5)
+  ->execute();
+
+if (!empty(\$nids)) {
+  // Voir plus bas.
+}
+]]></content>
+    <tabTrigger>efq</tabTrigger>
+    <scope>source.php</scope>
+    <description>D8 EFQ</description>
+</snippet>

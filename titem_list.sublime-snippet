@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[
+
+\$items[] = [
+  '#markup' => 'TOTO', // ou array theme
+  '#wrapper_attributes' => ['class' => ['TOTO']],
+];
+
+'item_list' = [
+  '#theme' => 'item_list',
+  '#items' => \$items,
+  '#attributes' => [
+    'class' => 'class1',
+  ],
+];
+
+]]></content>
+  <tabTrigger>titem_list</tabTrigger>
+  <scope>source.php</scope>
+  <description>D8 titem_list</description>
+</snippet>

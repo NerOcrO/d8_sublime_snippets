@@ -1,0 +1,17 @@
+<snippet>
+  <content><![CDATA[
+
+'image' = [
+  '#theme' => 'image',
+  '#uri' => drupal_get_path('theme', 'XXX') . '/images/XXX.png',
+  // '#uri' => theme_get_setting('logo')['path'],
+  '#width' => 80,
+  '#height' => 80,
+  // '#attributes' => ['class' => [${6}]],
+];
+
+]]></content>
+  <tabTrigger>timage</tabTrigger>
+  <scope>source.php</scope>
+  <description>D8 timage</description>
+</snippet>

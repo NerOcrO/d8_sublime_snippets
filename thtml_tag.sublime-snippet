@@ -1,0 +1,15 @@
+<snippet>
+  <content><![CDATA[
+
+'html_tag' = [
+  '#type' => 'html_tag',
+  '#tag' => 'div',
+  '#value' => \$this->t(''),
+  '#attributes' => ['class' => ['class1', 'class2']],
+];
+
+]]></content>
+  <tabTrigger>thtml_tag</tabTrigger>
+  <scope>source.php</scope>
+  <description>D8 thtml_tag</description>
+</snippet>

@@ -1,0 +1,23 @@
+<snippet>
+  <content><![CDATA[
+
+'field' = [
+  '#theme' => 'field',
+  // '#label_display' => FALSE, // or hidden
+  // '#title' => t(''),
+  // '#label_display' => 'inline', // or hidden or above
+  '#field_name' => '${1}', // same name of extrafield
+  '#field_type' => 'text',
+  '#entity_type' => 'node',
+  '#bundle' => \$node->type,
+  '#items' => [[]],
+  [
+    '#markup' => '${2}',
+  ],
+];
+
+]]></content>
+  <tabTrigger>tfield</tabTrigger>
+  <scope>source.php</scope>
+  <description>D8 tfield</description>
+</snippet>
