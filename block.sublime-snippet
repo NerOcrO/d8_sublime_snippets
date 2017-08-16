@@ -1,6 +1,22 @@
 <snippet>
     <content><![CDATA[
-class ${1}Block extends BlockBase implements ContainerFactoryPluginInterface {
+<?php
+
+namespace Drupal\\${1:MODULE}\Plugin\Block;
+
+use Drupal\Core\Entity\EntityTypeManagerInterface;
+use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
+use Symfony\Component\DependencyInjection\ContainerInterface;
+
+/**
+ * [RESUME].
+ *
+ * @Block(
+ *  id = "${1:MODULE}_[MACHINE_NAME]",
+ *  admin_label = @Translation("[PROJET] : [RESUME]"),
+ * )
+ */
+class Block extends BlockBase implements ContainerFactoryPluginInterface {
 
   /**
    * The entity type manager.
@@ -42,7 +58,7 @@ class ${1}Block extends BlockBase implements ContainerFactoryPluginInterface {
    * {@inheritdoc}
    */
   public function build() {
-
+    return [];
   }
 
 }
