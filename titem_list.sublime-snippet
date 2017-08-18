@@ -6,7 +6,7 @@
   '#wrapper_attributes' => ['class' => ['TOTO']],
 ];
 
-'item_list' = [
+'item_list' => [
   '#theme' => 'item_list',
   '#items' => \$items,
   '#attributes' => [

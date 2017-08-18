@@ -1,7 +1,7 @@
 <snippet>
   <content><![CDATA[
 
-'html_tag' = [
+'html_tag' => [
   '#type' => 'html_tag',
   '#tag' => 'div',
   '#value' => \$this->t(''),

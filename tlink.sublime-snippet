@@ -3,7 +3,7 @@
 
 use Drupal\Core\Url;
 
-'link' = [
+'link' => [
   '#type' => 'link',
   '#title' => \$this->t('Ton lien'),
   // '#title' => ['#markup' => [HTML]], // dans le cas où on veut mettre du HTML dans le lien

@@ -1,7 +1,7 @@
 <snippet>
   <content><![CDATA[
 
-'image' = [
+'image' => [
   '#theme' => 'image',
   '#uri' => drupal_get_path('theme', 'XXX') . '/images/XXX.png',
   // '#uri' => theme_get_setting('logo')['path'],

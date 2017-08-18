@@ -1,7 +1,7 @@
 <snippet>
   <content><![CDATA[
 
-'field' = [
+'field' => [
   '#theme' => 'field',
   // '#label_display' => FALSE, // or hidden
   // '#title' => t(''),
