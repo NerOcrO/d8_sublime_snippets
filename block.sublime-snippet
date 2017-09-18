@@ -4,6 +4,7 @@
 
 namespace Drupal\\${1:MODULE}\Plugin\Block;
 
+use Drupal\Core\Block\BlockBase;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
