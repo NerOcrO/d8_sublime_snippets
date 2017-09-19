@@ -1,6 +1,5 @@
 <snippet>
     <content><![CDATA[
-<?php
 
 namespace Drupal\\${1:MODULE}\Plugin\search_api\processor;
 
@@ -22,37 +21,37 @@ use Drupal\search_api\Processor\ProcessorProperty;
  *   locked = true,
  * )
  */
-class ${2:MODULE}Processor extends ProcessorPluginBase {
+class [CLASS_NAME]Processor extends ProcessorPluginBase {
 
   /**
    * {@inheritdoc}
    */
-  public function getPropertyDefinitions(DatasourceInterface $datasource = NULL) {
-    $properties = [];
+  public function getPropertyDefinitions(DatasourceInterface \$datasource = NULL) {
+    \$properties = [];
 
-    if (!$datasource) {
-      $definition = [
-        'label' => $this->t('[LABEL]'),
-        'description' => $this->t('[DESCRIPTION].'),
+    if (!\$datasource) {
+      \$definition = [
+        'label' => \$this->t('[LABEL]'),
+        'description' => \$this->t('[DESCRIPTION].'),
         'type' => 'string',
-        'processor_id' => $this->getPluginId(),
+        'processor_id' => \$this->getPluginId(),
       ];
-      $properties['${1:MODULE}_[MACHINE_NAME]'] = new ProcessorProperty($definition);
+      \$properties['${1:MODULE}_[MACHINE_NAME]'] = new ProcessorProperty(\$definition);
     }
 
-    return $properties;
+    return \$properties;
   }
 
   /**
    * {@inheritdoc}
    */
-  public function addFieldValues(ItemInterface $item) {
-    $fields = $this->getFieldsHelper()->filterForPropertyPath($item->getFields(), NULL, '${1:MODULE}_[MACHINE_NAME]');
-    $object = $item->getOriginalObject()->getValue();
-    $bundle = $object->bundle();
+  public function addFieldValues(ItemInterface \$item) {
+    \$fields = \$this->getFieldsHelper()->filterForPropertyPath(\$item->getFields(), NULL, '${1:MODULE}_[MACHINE_NAME]');
+    \$object = \$item->getOriginalObject()->getValue();
+    \$bundle = \$object->bundle();
 
-    foreach ($fields as $field) {
-      $field->addValue($value);
+    foreach (\$fields as \$field) {
+      \$field->addValue(\$value);
     }
   }
 
