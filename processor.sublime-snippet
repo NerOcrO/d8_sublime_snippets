@@ -73,10 +73,12 @@ class [CLASS_NAME]Processor extends ProcessorPluginBase implements ContainerFact
    * {@inheritdoc}
    */
   public function addFieldValues(ItemInterface \$item) {
-    \$fields = \$this->getFieldsHelper()->filterForPropertyPath(\$item->getFields(), NULL, '${1:MODULE}_[MACHINE_NAME]');
+    \$fields = \$this->getFieldsHelper()->filterForPropertyPath(\$item->getFields(), NULL, \$this->getPluginId());
+    /** @var \Drupal\Core\Entity\EntityInterface \$object */
     \$object = \$item->getOriginalObject()->getValue();
     \$bundle = \$object->bundle();
 
+    /** @var \Drupal\search_api\Item\FieldInterface \$field */
     foreach (\$fields as \$field) {
       \$field->addValue(\$value);
     }
