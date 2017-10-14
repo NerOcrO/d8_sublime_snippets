@@ -1,0 +1,47 @@
+<snippet>
+    <content><![CDATA[
+
+namespace Drupal\\${1:MODULE}\Controller;
+
+use Drupal\Core\Controller\ControllerBase;
+use Symfony\Component\DependencyInjection\ContainerInterface;
+
+/**
+ * [DESCRIPTION].
+ */
+class [CLASS_NAME]Controller extends ControllerBase {
+
+  /**
+   * Controller constructor.
+   */
+  public function __construct() {
+
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public static function create(ContainerInterface \$container) {
+    return new static(
+      \$container->get('XXX')
+    );
+  }
+
+  /**
+   * [DESCRIPTION].
+   *
+   * @return array
+   *   Tableau contenant le markup.
+   */
+  public function build() {
+
+    return \$build;
+  }
+
+}
+
+]]></content>
+    <tabTrigger>d8controller</tabTrigger>
+    <scope>source.php</scope>
+    <description>D8 controller</description>
+</snippet>
