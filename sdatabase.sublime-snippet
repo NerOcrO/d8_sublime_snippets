@@ -1,0 +1,25 @@
+<snippet>
+    <content><![CDATA[
+use Drupal\Core\Database\Connection;
+
+  /**
+   * The database connection.
+   *
+   * @var \Drupal\Core\Database\Connection
+   */
+  protected $database;
+
+  /**
+   * @param \Drupal\Core\Database\Connection $database
+   *   The database connection.
+   */
+  public function __construct(Connection $database) {
+    $this->database = $database;
+  }
+
+    $container->get('database')
+]]></content>
+    <tabTrigger>sdatabase</tabTrigger>
+    <scope>source.php</scope>
+    <description>D8 service Connection</description>
+</snippet>

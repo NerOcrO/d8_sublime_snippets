@@ -1,0 +1,25 @@
+<snippet>
+    <content><![CDATA[
+use Drupal\Core\Entity\EntityTypeManagerInterface;
+
+  /**
+   * The entity type manager.
+   *
+   * @var \Drupal\Core\Entity\EntityTypeManagerInterface
+   */
+  protected \$entityTypeManager;
+
+  /**
+   * @param \Drupal\Core\Entity\EntityTypeManagerInterface \$entity_type_manager
+   *   The entity type manager.
+   */
+  public function __construct(EntityTypeManagerInterface \$entity_type_manager) {
+    \$this->entityTypeManager = \$entity_type_manager;
+  }
+
+    $container->get('entity_type.manager')
+]]></content>
+    <tabTrigger>sentity_type_manager</tabTrigger>
+    <scope>source.php</scope>
+    <description>D8 service entityTypeManager</description>
+</snippet>

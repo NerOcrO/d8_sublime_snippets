@@ -3,7 +3,6 @@
 
 namespace Drupal\\${1:MODULE}\Plugin\Field\FieldFormatter;
 
-use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Field\FieldDefinitionInterface;
 use Drupal\Core\Field\FieldItemListInterface;
 use Drupal\Core\Field\FormatterBase;
@@ -25,13 +24,6 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 class [CLASS_NAME]Formatter extends FormatterBase implements ContainerFactoryPluginInterface {
 
   /**
-   * The entity type manager.
-   *
-   * @var \Drupal\Core\Entity\EntityTypeManagerInterface
-   */
-  protected \$entityTypeManager;
-
-  /**
    * Constructs a formatter instance.
    *
    * @param string \$plugin_id
@@ -48,12 +40,9 @@ class [CLASS_NAME]Formatter extends FormatterBase implements ContainerFactoryPlu
    *   The view mode.
    * @param array \$third_party_settings
    *   Any third party settings.
-   * @param \Drupal\Core\Entity\EntityTypeManagerInterface \$entity_type_manager
-   *   The entity type manager.
    */
-  public function __construct(\$plugin_id, \$plugin_definition, FieldDefinitionInterface \$field_definition, array \$settings, \$label, \$view_mode, array \$third_party_settings, EntityTypeManagerInterface \$entity_type_manager) {
+  public function __construct(\$plugin_id, \$plugin_definition, FieldDefinitionInterface \$field_definition, array \$settings, \$label, \$view_mode, array \$third_party_settings) {
     parent::__construct(\$plugin_id, \$plugin_definition, \$field_definition, \$settings, \$label, \$view_mode, \$third_party_settings);
-    \$this->entityTypeManager = \$entity_type_manager;
   }
 
   /**
@@ -67,8 +56,7 @@ class [CLASS_NAME]Formatter extends FormatterBase implements ContainerFactoryPlu
       \$configuration['settings'],
       \$configuration['label'],
       \$configuration['view_mode'],
-      \$configuration['third_party_settings'],
-      \$container->get('entity_type.manager')
+      \$configuration['third_party_settings']
     );
   }
 

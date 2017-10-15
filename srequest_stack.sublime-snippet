@@ -1,0 +1,25 @@
+<snippet>
+    <content><![CDATA[
+use Symfony\Component\HttpFoundation\RequestStack;
+
+  /**
+   * The request stack.
+   *
+   * @var \Symfony\Component\HttpFoundation\RequestStack
+   */
+  protected $request;
+
+  /**
+   * @param \Symfony\Component\HttpFoundation\RequestStack $request
+   *   The request stack.
+   */
+  public function __construct(RequestStack $request) {
+    $this->request = $request;
+  }
+
+    $container->get('request_stack')
+]]></content>
+    <tabTrigger>srequest_stack</tabTrigger>
+    <scope>source.php</scope>
+    <description>D8 service RequestStack</description>
+</snippet>

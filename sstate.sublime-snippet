@@ -1,0 +1,25 @@
+<snippet>
+    <content><![CDATA[
+use Drupal\Core\State\StateInterface;
+
+  /**
+   * The state.
+   *
+   * @var \Drupal\Core\State\StateInterface
+   */
+  protected $state;
+
+  /**
+   * @param \Drupal\Core\State\StateInterface $state
+   *   The state.
+   */
+  public function __construct(StateInterface $state) {
+    $this->state = $state;
+  }
+
+    $container->get('state')
+]]></content>
+    <tabTrigger>sstate</tabTrigger>
+    <scope>source.php</scope>
+    <description>D8 service State</description>
+</snippet>

@@ -3,7 +3,6 @@
 
 namespace Drupal\\${1:MODULE}\Form;
 
-use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
@@ -14,20 +13,10 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 class [CLASS_NAME]Form extends FormBase {
 
   /**
-   * Provides an interface for entity type managers.
-   *
-   * @var \Drupal\Core\Entity\EntityTypeManagerInterface
-   */
-  protected \$entityTypeManager;
-
-  /**
    * Constructs a form instance.
-   *
-   * @param \Drupal\Core\Entity\EntityTypeManagerInterface \$entity_type_manager
-   *   Provides an interface for entity type managers.
    */
-  public function __construct(EntityTypeManagerInterface \$entity_type_manager) {
-    \$this->entityTypeManager = \$entity_type_manager;
+  public function __construct() {
+
   }
 
   /**
@@ -35,7 +24,7 @@ class [CLASS_NAME]Form extends FormBase {
    */
   public static function create(ContainerInterface \$container) {
     return new static(
-      \$container->get('entity_type.manager')
+
     );
   }
 

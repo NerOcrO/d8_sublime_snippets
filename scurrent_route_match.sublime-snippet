@@ -1,0 +1,25 @@
+<snippet>
+    <content><![CDATA[
+use Drupal\Core\Routing\RouteMatchInterface;
+
+  /**
+   * The current route match.
+   *
+   * @var \Drupal\Core\Routing\RouteMatchInterface
+   */
+  protected $currentRouteMatch;
+
+  /**
+   * @param \Drupal\Core\Routing\RouteMatchInterface $current_route_match
+   *   The current route match.
+   */
+  public function __construct(RouteMatchInterface $current_route_match) {
+    $this->currentRouteMatch = $current_route_match;
+  }
+
+    $container->get('current_route_match')
+]]></content>
+    <tabTrigger>scurrent_route_match</tabTrigger>
+    <scope>source.php</scope>
+    <description>D8 service CurrentRouteMatch</description>
+</snippet>

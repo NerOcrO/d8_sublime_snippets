@@ -1,0 +1,25 @@
+<snippet>
+    <content><![CDATA[
+use Drupal\Core\Form\FormBuilderInterface;
+
+  /**
+   * The form builder.
+   *
+   * @var \Drupal\Core\Form\FormBuilderInterface
+   */
+  protected $formBuilder;
+
+  /**
+   * @param \Drupal\Core\Form\FormBuilderInterface $form_builder
+   *   The form builder.
+   */
+  public function __construct(FormBuilderInterface $form_builder) {
+    $this->formBuilder = $form_builder;
+  }
+
+    $container->get('form_builder')
+]]></content>
+    <tabTrigger>sform_builder</tabTrigger>
+    <scope>source.php</scope>
+    <description>D8 service FormBuilder</description>
+</snippet>
