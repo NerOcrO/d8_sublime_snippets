@@ -21,7 +21,7 @@ class [CLASS_NAME]Form extends FormBase {
   protected \$entityTypeManager;
 
   /**
-   * Constructs a new object.
+   * Constructs a form instance.
    *
    * @param \Drupal\Core\Entity\EntityTypeManagerInterface \$entity_type_manager
    *   Provides an interface for entity type managers.

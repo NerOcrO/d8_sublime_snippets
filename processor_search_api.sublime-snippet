@@ -15,7 +15,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  *
  * @SearchApiProcessor(
  *   id = "${1:MODULE}_[MACHINE_NAME]",
- *   label = @Translation("[NOMDUPROJET] : [LABEL]"),
+ *   label = @Translation("[PROJECT_NAME] : [LABEL]"),
  *   description = @Translation("[DESCRIPTION]"),
  *   stages = {
  *     "add_properties" = 0,
@@ -26,7 +26,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 class [CLASS_NAME]Processor extends ProcessorPluginBase implements ContainerFactoryPluginInterface {
 
   /**
-   * Constructs a new object.
+   * Constructs a search_api processor instance.
    *
    * @param array \$configuration
    *   A configuration array containing information about the plugin instance.
@@ -87,7 +87,7 @@ class [CLASS_NAME]Processor extends ProcessorPluginBase implements ContainerFact
 }
 
 ]]></content>
-    <tabTrigger>d8processor</tabTrigger>
+    <tabTrigger>d8processor_search_api</tabTrigger>
     <scope>source.php</scope>
     <description>D8 processor search_api</description>
 </snippet>

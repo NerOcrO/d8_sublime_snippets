@@ -1,42 +1,47 @@
 <snippet>
     <content><![CDATA[
-<?php
 
-namespace Drupal\\${1:MODULE}\Plugin\Block;
+namespace Drupal\\${1:MODULE}\Plugin\facets\processor;
 
-use Drupal\Core\Block\BlockBase;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
+use Drupal\facets\FacetInterface;
+use Drupal\facets\Processor\BuildProcessorInterface;
+use Drupal\facets\Processor\ProcessorPluginBase;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * [DESCRIPTION].
  *
- * @Block(
- *  id = "${1:MODULE}_[MACHINE_NAME]",
- *  admin_label = @Translation("[PROJECT_NAME] : [LABEL]"),
+ * @FacetsProcessor(
+ *   id = "${1:MODULE}_[MACHINE_NAME]",
+ *   label = @Translation("[PROJECT_NAME] : [LABEL]"),
+ *   description = @Translation("[DESCRIPTION]."),
+ *   stages = {
+ *     "build" = 5
+ *   }
  * )
  */
-class Block extends BlockBase implements ContainerFactoryPluginInterface {
+class TypeActiviteProcessor extends ProcessorPluginBase implements BuildProcessorInterface, ContainerFactoryPluginInterface {
 
   /**
-   * The entity type manager.
+   * Entity type manager.
    *
    * @var \Drupal\Core\Entity\EntityTypeManagerInterface
    */
   protected \$entityTypeManager;
 
   /**
-   * Constructs a new block instance.
+   * Constructs a facets processor instance.
    *
    * @param array \$configuration
    *   A configuration array containing information about the plugin instance.
    * @param string \$plugin_id
-   *   The plugin ID for the plugin instance.
+   *   The plugin_id for the plugin instance.
    * @param mixed \$plugin_definition
    *   The plugin implementation definition.
    * @param \Drupal\Core\Entity\EntityTypeManagerInterface \$entity_type_manager
-   *   The entity type manager.
+   *   Entity type manager.
    */
   public function __construct(array \$configuration, \$plugin_id, \$plugin_definition, EntityTypeManagerInterface \$entity_type_manager) {
     parent::__construct(\$configuration, \$plugin_id, \$plugin_definition);
@@ -58,13 +63,24 @@ class Block extends BlockBase implements ContainerFactoryPluginInterface {
   /**
    * {@inheritdoc}
    */
-  public function build() {
-    return [];
+  public function build(FacetInterface \$facet, array \$results) {
+    /** @var \Drupal\facets\Result\ResultInterface \$result */
+    foreach (\$results as \$result) {
+      /** @var Drupal\taxonomy\TermInterface \$term */
+      \$term = \$this->entityTypeManager->getStorage('taxonomy_term')->load(\$result->getRawValue());
+
+      if (\$term) {
+        \$result->setDisplayValue(\$term->label());
+      }
+    }
+
+    return \$results;
   }
 
 }
+
 ]]></content>
-    <tabTrigger>d8block</tabTrigger>
+    <tabTrigger>d8processor_facets</tabTrigger>
     <scope>source.php</scope>
-    <description>D8 block</description>
+    <description>D8 processor facets</description>
 </snippet>

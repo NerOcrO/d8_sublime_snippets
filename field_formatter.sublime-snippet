@@ -32,7 +32,7 @@ class [CLASS_NAME]Formatter extends FormatterBase implements ContainerFactoryPlu
   protected \$entityTypeManager;
 
   /**
-   * Constructs a FormatterBase object.
+   * Constructs a formatter instance.
    *
    * @param string \$plugin_id
    *   The plugin_id for the formatter.
