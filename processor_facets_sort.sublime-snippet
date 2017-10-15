@@ -5,9 +5,9 @@ namespace Drupal\\${1:MODULE}\Plugin\facets\processor;
 
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
-use Drupal\facets\FacetInterface;
-use Drupal\facets\Processor\BuildProcessorInterface;
-use Drupal\facets\Processor\ProcessorPluginBase;
+use Drupal\facets\Processor\SortProcessorInterface;
+use Drupal\facets\Processor\SortProcessorPluginBase;
+use Drupal\facets\Result\Result;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
@@ -17,12 +17,13 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  *   id = "${1:MODULE}_[MACHINE_NAME]",
  *   label = @Translation("[PROJECT_NAME] : [LABEL]"),
  *   description = @Translation("[DESCRIPTION]."),
+ *   default_enabled = TRUE,
  *   stages = {
- *     "build" = 5
+ *     "sort" = 40
  *   }
  * )
  */
-class [CLASS_NAME]Processor extends ProcessorPluginBase implements BuildProcessorInterface, ContainerFactoryPluginInterface {
+class [CLASS_NAME]Processor extends SortProcessorPluginBase implements SortProcessorInterface, ContainerFactoryPluginInterface {
 
   /**
    * Entity type manager.
@@ -32,7 +33,7 @@ class [CLASS_NAME]Processor extends ProcessorPluginBase implements BuildProcesso
   protected \$entityTypeManager;
 
   /**
-   * Constructs a facets processor instance.
+   * Constructs a facets sort processor instance.
    *
    * @param array \$configuration
    *   A configuration array containing information about the plugin instance.
@@ -63,24 +64,31 @@ class [CLASS_NAME]Processor extends ProcessorPluginBase implements BuildProcesso
   /**
    * {@inheritdoc}
    */
-  public function build(FacetInterface \$facet, array \$results) {
-    /** @var \Drupal\facets\Result\ResultInterface \$result */
-    foreach (\$results as \$result) {
-      /** @var Drupal\taxonomy\TermInterface \$term */
-      \$term = \$this->entityTypeManager->getStorage('taxonomy_term')->load(\$result->getRawValue());
+  public function defaultConfiguration() {
+    return ['sort' => 'ASC'];
+  }
 
-      if (\$term) {
-        \$result->setDisplayValue(\$term->label());
-      }
+  /**
+   * {@inheritdoc}
+   */
+  public function sortResults(Result \$a, Result \$b) {
+    \$storage = \$this->entityTypeManager->getStorage('taxonomy_term');
+
+    /** @var Drupal\taxonomy\TermInterface \$term_a */
+    \$term_a = \$storage->load(\$a->getRawValue());
+    /** @var Drupal\taxonomy\TermInterface \$term_b */
+    \$term_b = \$storage->load(\$b->getRawValue());
+
+    if (\$term_a->field_poids->value == \$term_b->field_poids->value) {
+      return 0;
     }
-
-    return \$results;
+    return (\$term_a->field_poids->value < \$term_b->field_poids->value) ? -1 : 1;
   }
 
 }
 
 ]]></content>
-    <tabTrigger>d8processor_facets_</tabTrigger>
+    <tabTrigger>d8processor_facets_sort</tabTrigger>
     <scope>source.php</scope>
-    <description>D8 processor facets</description>
+    <description>D8 processor facets sort</description>
 </snippet>
