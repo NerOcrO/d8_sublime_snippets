@@ -19,5 +19,5 @@
 ]]></content>
   <tabTrigger>tfield</tabTrigger>
   <scope>source.php</scope>
-  <description>D8 tfield</description>
+  <description>D8 theme field</description>
 </snippet>

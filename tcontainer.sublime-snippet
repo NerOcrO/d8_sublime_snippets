@@ -1,0 +1,18 @@
+<snippet>
+  <content><![CDATA[
+
+'container' => [
+  '#type' => 'container',
+  '#attributes' => [
+    'class' => ['class1'],
+  ],
+  'XXX' => [
+
+  ],
+];
+
+]]></content>
+  <tabTrigger>tcontainer</tabTrigger>
+  <scope>source.php</scope>
+  <description>D8 type container</description>
+</snippet>
