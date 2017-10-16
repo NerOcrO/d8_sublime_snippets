@@ -7,17 +7,17 @@ use Drupal\Core\Render\RendererInterface;
    *
    * @var \Drupal\Core\Render\RendererInterface
    */
-  protected $renderer;
+  protected \$renderer;
 
   /**
-   * @param \Drupal\Core\Render\RendererInterface $renderer
+   * @param \Drupal\Core\Render\RendererInterface \$renderer
    *   The renderer.
    */
-  public function __construct(RendererInterface $renderer) {
-    $this->renderer = $renderer;
+  public function __construct(RendererInterface \$renderer) {
+    \$this->renderer = \$renderer;
   }
 
-    $container->get('renderer')
+    \$container->get('renderer')
 ]]></content>
     <tabTrigger>srenderer</tabTrigger>
     <scope>source.php</scope>

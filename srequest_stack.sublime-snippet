@@ -7,17 +7,17 @@ use Symfony\Component\HttpFoundation\RequestStack;
    *
    * @var \Symfony\Component\HttpFoundation\RequestStack
    */
-  protected $request;
+  protected \$request;
 
   /**
-   * @param \Symfony\Component\HttpFoundation\RequestStack $request
+   * @param \Symfony\Component\HttpFoundation\RequestStack \$request
    *   The request stack.
    */
-  public function __construct(RequestStack $request) {
-    $this->request = $request;
+  public function __construct(RequestStack \$request) {
+    \$this->request = \$request;
   }
 
-    $container->get('request_stack')
+    \$container->get('request_stack')
 ]]></content>
     <tabTrigger>srequest_stack</tabTrigger>
     <scope>source.php</scope>

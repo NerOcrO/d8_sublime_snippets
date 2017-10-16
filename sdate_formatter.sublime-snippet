@@ -7,17 +7,17 @@ use Drupal\Core\Datetime\DateFormatterInterface;
    *
    * @var \Drupal\Core\Datetime\DateFormatterInterface
    */
-  protected $dateFormatter;
+  protected \$dateFormatter;
 
   /**
-   * @param \Drupal\Core\Datetime\DateFormatterInterface $date_formatter
+   * @param \Drupal\Core\Datetime\DateFormatterInterface \$date_formatter
    *   The date formatter.
    */
-  public function __construct(DateFormatterInterface $date_formatter) {
-    $this->renderer = $renderer;
+  public function __construct(DateFormatterInterface \$date_formatter) {
+    \$this->renderer = \$renderer;
   }
 
-    $container->get('date.formatter')
+    \$container->get('date.formatter')
 ]]></content>
     <tabTrigger>sdate_formatter</tabTrigger>
     <scope>source.php</scope>

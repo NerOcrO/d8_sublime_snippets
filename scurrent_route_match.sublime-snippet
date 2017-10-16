@@ -7,17 +7,17 @@ use Drupal\Core\Routing\RouteMatchInterface;
    *
    * @var \Drupal\Core\Routing\RouteMatchInterface
    */
-  protected $currentRouteMatch;
+  protected \$currentRouteMatch;
 
   /**
-   * @param \Drupal\Core\Routing\RouteMatchInterface $current_route_match
+   * @param \Drupal\Core\Routing\RouteMatchInterface \$current_route_match
    *   The current route match.
    */
-  public function __construct(RouteMatchInterface $current_route_match) {
-    $this->currentRouteMatch = $current_route_match;
+  public function __construct(RouteMatchInterface \$current_route_match) {
+    \$this->currentRouteMatch = \$current_route_match;
   }
 
-    $container->get('current_route_match')
+    \$container->get('current_route_match')
 ]]></content>
     <tabTrigger>scurrent_route_match</tabTrigger>
     <scope>source.php</scope>

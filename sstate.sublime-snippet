@@ -7,17 +7,17 @@ use Drupal\Core\State\StateInterface;
    *
    * @var \Drupal\Core\State\StateInterface
    */
-  protected $state;
+  protected \$state;
 
   /**
-   * @param \Drupal\Core\State\StateInterface $state
+   * @param \Drupal\Core\State\StateInterface \$state
    *   The state.
    */
-  public function __construct(StateInterface $state) {
-    $this->state = $state;
+  public function __construct(StateInterface \$state) {
+    \$this->state = \$state;
   }
 
-    $container->get('state')
+    \$container->get('state')
 ]]></content>
     <tabTrigger>sstate</tabTrigger>
     <scope>source.php</scope>

@@ -7,17 +7,17 @@ use Drupal\Core\Database\Connection;
    *
    * @var \Drupal\Core\Database\Connection
    */
-  protected $database;
+  protected \$database;
 
   /**
-   * @param \Drupal\Core\Database\Connection $database
+   * @param \Drupal\Core\Database\Connection \$database
    *   The database connection.
    */
-  public function __construct(Connection $database) {
-    $this->database = $database;
+  public function __construct(Connection \$database) {
+    \$this->database = \$database;
   }
 
-    $container->get('database')
+    \$container->get('database')
 ]]></content>
     <tabTrigger>sdatabase</tabTrigger>
     <scope>source.php</scope>

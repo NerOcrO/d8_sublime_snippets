@@ -7,17 +7,17 @@ use Drupal\Core\Language\LanguageManagerInterface;
    *
    * @var \Drupal\Core\Language\LanguageManagerInterface
    */
-  protected $languageManager;
+  protected \$languageManager;
 
   /**
-   * @param \Drupal\Core\Language\LanguageManagerInterface $language_manager
+   * @param \Drupal\Core\Language\LanguageManagerInterface \$language_manager
    *   The language manager.
    */
-  public function __construct(LanguageManagerInterface $language_manager) {
-    $this->languageManager = $language_manager;
+  public function __construct(LanguageManagerInterface \$language_manager) {
+    \$this->languageManager = \$language_manager;
   }
 
-    $container->get('language_manager')
+    \$container->get('language_manager')
 ]]></content>
     <tabTrigger>slanguage_manager</tabTrigger>
     <scope>source.php</scope>
