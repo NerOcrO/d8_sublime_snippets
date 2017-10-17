@@ -3,13 +3,14 @@
 
 namespace Drupal\\${1:MODULE}\Controller;
 
+use Drupal\Core\DependencyInjection\ContainerInjectionInterface;
 use Drupal\Core\Controller\ControllerBase;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * [DESCRIPTION].
  */
-class [CLASS_NAME]Controller extends ControllerBase {
+class [CLASS_NAME]Controller implements ContainerInjectionInterface {
 
   /**
    * Constructs a controller instance.
@@ -23,7 +24,7 @@ class [CLASS_NAME]Controller extends ControllerBase {
    */
   public static function create(ContainerInterface \$container) {
     return new static(
-      \$container->get('XXX')
+
     );
   }
 
