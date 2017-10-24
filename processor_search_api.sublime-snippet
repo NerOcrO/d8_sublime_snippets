@@ -16,7 +16,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  * @SearchApiProcessor(
  *   id = "${1:MODULE}_[MACHINE_NAME]",
  *   label = @Translation("[PROJECT_NAME] : [LABEL]"),
- *   description = @Translation("[DESCRIPTION]"),
+ *   description = @Translation("[DESCRIPTION]."),
  *   stages = {
  *     "add_properties" = 0,
  *   },
