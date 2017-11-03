@@ -17,7 +17,7 @@ use Drupal\Core\Routing\RouteMatchInterface;
     \$this->currentRouteMatch = \$current_route_match;
   }
 
-    \$container->get('current_route_match')
+     \$container->get('current_route_match')
 ]]></content>
     <tabTrigger>scurrent_route_match</tabTrigger>
     <scope>source.php</scope>

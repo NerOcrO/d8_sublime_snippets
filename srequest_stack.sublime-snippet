@@ -17,7 +17,7 @@ use Symfony\Component\HttpFoundation\RequestStack;
     \$this->request = \$request;
   }
 
-    \$container->get('request_stack')
+      \$container->get('request_stack')
 ]]></content>
     <tabTrigger>srequest_stack</tabTrigger>
     <scope>source.php</scope>

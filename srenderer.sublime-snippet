@@ -17,7 +17,7 @@ use Drupal\Core\Render\RendererInterface;
     \$this->renderer = \$renderer;
   }
 
-    \$container->get('renderer')
+      \$container->get('renderer')
 ]]></content>
     <tabTrigger>srenderer</tabTrigger>
     <scope>source.php</scope>

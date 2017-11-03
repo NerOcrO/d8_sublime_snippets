@@ -17,7 +17,7 @@ use Drupal\Core\Datetime\DateFormatterInterface;
     \$this->renderer = \$renderer;
   }
 
-    \$container->get('date.formatter')
+      \$container->get('date.formatter')
 ]]></content>
     <tabTrigger>sdate_formatter</tabTrigger>
     <scope>source.php</scope>

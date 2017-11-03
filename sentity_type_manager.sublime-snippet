@@ -17,7 +17,7 @@ use Drupal\Core\Entity\EntityTypeManagerInterface;
     \$this->entityTypeManager = \$entity_type_manager;
   }
 
-    $container->get('entity_type.manager')
+      $container->get('entity_type.manager')
 ]]></content>
     <tabTrigger>sentity_type_manager</tabTrigger>
     <scope>source.php</scope>

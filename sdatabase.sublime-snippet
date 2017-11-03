@@ -17,7 +17,7 @@ use Drupal\Core\Database\Connection;
     \$this->database = \$database;
   }
 
-    \$container->get('database')
+      \$container->get('database')
 ]]></content>
     <tabTrigger>sdatabase</tabTrigger>
     <scope>source.php</scope>
