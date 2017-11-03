@@ -11,12 +11,12 @@ use Drupal\facets\Result\Result;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
- * [DESCRIPTION].
+ * Trie [DESCRIPTION].
  *
  * @FacetsProcessor(
  *   id = "${1:MODULE}_[MACHINE_NAME]",
  *   label = @Translation("[PROJECT_NAME] : [LABEL]"),
- *   description = @Translation("[DESCRIPTION]."),
+ *   description = @Translation("Trie [DESCRIPTION]."),
  *   default_enabled = TRUE,
  *   stages = {
  *     "sort" = 40

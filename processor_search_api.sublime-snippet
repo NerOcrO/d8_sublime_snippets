@@ -11,12 +11,12 @@ use Drupal\search_api\Processor\ProcessorProperty;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
- * [LABEL].
+ * Indexe [DESCRIPTION].
  *
  * @SearchApiProcessor(
  *   id = "${1:MODULE}_[MACHINE_NAME]",
  *   label = @Translation("[PROJECT_NAME] : [LABEL]"),
- *   description = @Translation("[DESCRIPTION]."),
+ *   description = @Translation("Indexe [DESCRIPTION]."),
  *   stages = {
  *     "add_properties" = 0,
  *   },
@@ -59,7 +59,7 @@ class [CLASS_NAME]Processor extends ProcessorPluginBase implements ContainerFact
     if (!\$datasource) {
       \$definition = [
         'label' => \$this->t('[LABEL]'),
-        'description' => \$this->t('[DESCRIPTION].'),
+        'description' => \$this->t('Indexe [DESCRIPTION].'),
         'type' => 'string',
         'processor_id' => \$this->getPluginId(),
       ];
