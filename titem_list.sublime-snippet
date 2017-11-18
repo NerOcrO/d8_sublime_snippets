@@ -1,19 +1,18 @@
 <snippet>
   <content><![CDATA[
 
-\$items[] = [
-  '#markup' => 'TOTO', // ou array theme
-  '#wrapper_attributes' => ['class' => ['TOTO']],
-];
+    \$items[] = [
+      '#markup' => '...', // or array theme
+      '#wrapper_attributes' => ['class' => ['class1']],
+    ];
 
-'item_list' => [
-  '#theme' => 'item_list',
-  '#items' => \$items,
-  '#attributes' => [
-    'class' => 'class1',
-  ],
-];
-
+      'item_list' => [
+        '#theme' => 'item_list',
+        '#items' => \$items,
+        '#attributes' => [
+          'class' => ['class1'],
+        ],
+      ],
 ]]></content>
   <tabTrigger>titem_list</tabTrigger>
   <scope>source.php</scope>

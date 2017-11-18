@@ -1,21 +1,24 @@
 <snippet>
     <content><![CDATA[
-\$nids = \Drupal::entityQuery('node')
-  ->condition('type', 'publication')
-  ->condition('status', NODE_PUBLISHED)
-  ->condition('promote', NODE_PROMOTED)
-  // Choisir un chemin "long" quand c'est un champ à plusieurs valeurs genre date range : field_date.value1 ou field_date.value2
-  ->condition('field_public', \$tids, 'IN')
-  ->condition('field_articles', \$nid)
-  ->condition('field_date_debut_fin', gmdate('Y-m-d'), '<=')
-  ->sort('created', 'DESC')
-  ->range(0, 10)
-  ->pager(5)
-  ->execute();
+    \$nids = \Drupal::entityQuery('node')
+      ->condition('type', 'publication')
+      ->condition('status', NODE_PUBLISHED)
+      ->condition('promote', NODE_PROMOTED)
+      // Choisir un chemin "long" quand c'est un champ à plusieurs valeurs genre date range : field_date.value1 ou field_date.value2
+      ->condition('field_public', \$tids, 'IN')
+      ->condition('field_articles', \$nid)
+      ->condition('field_date_debut_fin', gmdate('Y-m-d'), '<=')
+      ->sort('created', 'DESC')
+      ->range(0, 10)
+      ->pager(5)
+      ->execute();
 
-if (!empty(\$nids)) {
-  // Voir plus bas.
-}
+    if (!empty(\$nids)) {
+      /** @var \Drupal\Core\Entity\EntityTypeManagerInterface \$entity_type_manager */
+      \$entity_type_manager = \Drupal::entityTypeManager();
+      \$entities = \$entity_type_manager->getStorage(\$entity_type)->loadMultiple(\$ids);
+      \$items = \$entity_type_manager->getViewBuilder(\$entity_type)->viewMultiple(\$entities, \$view_mode);
+    }
 ]]></content>
     <tabTrigger>efq</tabTrigger>
     <scope>source.php</scope>

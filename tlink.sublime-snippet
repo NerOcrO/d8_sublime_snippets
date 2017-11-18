@@ -1,15 +1,12 @@
 <snippet>
   <content><![CDATA[
-
 use Drupal\Core\Url;
-
-'link' => [
-  '#type' => 'link',
-  '#title' => \$this->t('Ton lien'),
-  // '#title' => ['#markup' => [HTML]], // dans le cas où on veut mettre du HTML dans le lien
-  '#url' => Url::fromUri('XXX'),
-];
-
+      'link' => [
+        '#type' => 'link',
+        '#title' => \$this->t(''),
+        // '#title' => ['#markup' => [HTML]], // in case of HTML content
+        '#url' => Url::fromUri('XXX'),
+      ],
 ]]></content>
   <tabTrigger>tlink</tabTrigger>
   <scope>source.php</scope>
