@@ -3,14 +3,18 @@
 
 namespace Drupal\\${1:MODULE}\Form;
 
-use Drupal\Core\Form\FormBase;
+use Drupal\Core\DependencyInjection\ContainerInjectionInterface;
+use Drupal\Core\Form\FormInterface;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\StringTranslation\StringTranslationTrait;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * [DESCRIPTION].
  */
-class [CLASS_NAME]Form extends FormBase {
+class [CLASS_NAME]Form implements FormInterface, ContainerInjectionInterface {
+
+  use StringTranslationTrait;
 
   /**
    * Constructs a form instance.
@@ -42,6 +46,11 @@ class [CLASS_NAME]Form extends FormBase {
 
     return \$form;
   }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function validateForm(array &$form, FormStateInterface $form_state) {}
 
   /**
    * {@inheritdoc}
