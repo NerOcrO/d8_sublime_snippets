@@ -22,7 +22,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  *   }
  * )
  */
-class [CLASS_NAME]Processor extends ProcessorPluginBase implements BuildProcessorInterface, ContainerFactoryPluginInterface {
+class ${TM_FILENAME/(\w+)\.php/\1/g} extends ProcessorPluginBase implements BuildProcessorInterface, ContainerFactoryPluginInterface {
 
   /**
    * The entity type manager.

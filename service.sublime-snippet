@@ -6,7 +6,7 @@ namespace Drupal\\${1:MODULE};
 /**
  * [DESCRIPTION].
  */
-class [CLASS_NAME] {
+class ${TM_FILENAME/(\w+)\.php/\1/g} {
 
   /**
    * Constructs a service instance.

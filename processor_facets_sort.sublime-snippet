@@ -23,7 +23,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  *   }
  * )
  */
-class [CLASS_NAME]Processor extends SortProcessorPluginBase implements SortProcessorInterface, ContainerFactoryPluginInterface {
+class ${TM_FILENAME/(\w+)\.php/\1/g} extends SortProcessorPluginBase implements SortProcessorInterface, ContainerFactoryPluginInterface {
 
   /**
    * The entity type manager.

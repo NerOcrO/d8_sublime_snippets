@@ -9,7 +9,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 /**
  * [DESCRIPTION].
  */
-class [CLASS_NAME]Controller implements ContainerInjectionInterface {
+class ${TM_FILENAME/(\w+)\.php/\1/g} implements ContainerInjectionInterface {
 
   /**
    * Constructs a controller instance.

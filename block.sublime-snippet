@@ -15,7 +15,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  *  admin_label = @Translation("[PROJECT_NAME] : [LABEL]"),
  * )
  */
-class [CLASS_NAME]Block extends BlockBase implements ContainerFactoryPluginInterface {
+class ${TM_FILENAME/(\w+)\.php/\1/g} extends BlockBase implements ContainerFactoryPluginInterface {
 
   /**
    * Constructs a new block instance.

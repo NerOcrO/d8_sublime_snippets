@@ -23,7 +23,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  *   locked = true,
  * )
  */
-class [CLASS_NAME]Processor extends ProcessorPluginBase implements ContainerFactoryPluginInterface {
+class ${TM_FILENAME/(\w+)\.php/\1/g} extends ProcessorPluginBase implements ContainerFactoryPluginInterface {
 
   /**
    * Constructs a search_api processor instance.
