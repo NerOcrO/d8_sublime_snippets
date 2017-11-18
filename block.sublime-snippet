@@ -45,6 +45,13 @@ class ${TM_FILENAME/(\w+)\.php/\1/g} extends BlockBase implements ContainerFacto
   /**
    * {@inheritdoc}
    */
+  public function getCacheContexts() {
+    return ['url'];
+  }
+
+  /**
+   * {@inheritdoc}
+   */
   public function build() {
     return [];
   }
