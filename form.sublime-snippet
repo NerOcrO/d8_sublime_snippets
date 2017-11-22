@@ -17,10 +17,20 @@ class ${TM_FILENAME/(\w+)\.php/\1/g} implements FormInterface, ContainerInjectio
   use StringTranslationTrait;
 
   /**
-   * Constructs a form instance.
+   * The language manager service.
+   *
+   * @var \Drupal\Core\Language\LanguageManagerInterface
    */
-  public function __construct() {
+  protected \$languageManager;
 
+  /**
+   * Constructs a form instance.
+   *
+   * @param \Drupal\Core\Language\LanguageManagerInterface \$language_manager
+   *   The language manager service.
+   */
+  public function __construct(LanguageManagerInterface \$language_manager) {
+    \$this->languageManager = \$language_manager;
   }
 
   /**
@@ -28,7 +38,7 @@ class ${TM_FILENAME/(\w+)\.php/\1/g} implements FormInterface, ContainerInjectio
    */
   public static function create(ContainerInterface \$container) {
     return new static(
-
+      \$container->get('language_manager')
     );
   }
 

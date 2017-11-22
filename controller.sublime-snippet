@@ -4,6 +4,7 @@
 namespace Drupal\\${1:MODULE}\Controller;
 
 use Drupal\Core\DependencyInjection\ContainerInjectionInterface;
+use Drupal\Core\StringTranslation\StringTranslationTrait;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
@@ -11,11 +12,23 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  */
 class ${TM_FILENAME/(\w+)\.php/\1/g} implements ContainerInjectionInterface {
 
+  use StringTranslationTrait;
+
+  /**
+   * The language manager service.
+   *
+   * @var \Drupal\Core\Language\LanguageManagerInterface
+   */
+  protected \$languageManager;
+
   /**
    * Constructs a controller instance.
+   *
+   * @param \Drupal\Core\Language\LanguageManagerInterface \$language_manager
+   *   The language manager service.
    */
-  public function __construct() {
-
+  public function __construct(LanguageManagerInterface \$language_manager) {
+    \$this->languageManager = \$language_manager;
   }
 
   /**
@@ -23,7 +36,7 @@ class ${TM_FILENAME/(\w+)\.php/\1/g} implements ContainerInjectionInterface {
    */
   public static function create(ContainerInterface \$container) {
     return new static(
-
+      \$container->get('language_manager')
     );
   }
 
