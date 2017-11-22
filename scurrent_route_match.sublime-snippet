@@ -1,5 +1,5 @@
 <snippet>
-    <content><![CDATA[
+  <content><![CDATA[
 use Drupal\Core\Routing\RouteMatchInterface;
 
   /**
@@ -19,7 +19,7 @@ use Drupal\Core\Routing\RouteMatchInterface;
 
      \$container->get('current_route_match')
 ]]></content>
-    <tabTrigger>scurrent_route_match</tabTrigger>
-    <scope>source.php</scope>
-    <description>D8 service CurrentRouteMatch</description>
+  <tabTrigger>scurrent_route_match</tabTrigger>
+  <scope>source.php</scope>
+  <description>D8 service CurrentRouteMatch</description>
 </snippet>

@@ -1,5 +1,5 @@
 <snippet>
-    <content><![CDATA[
+  <content><![CDATA[
 
 namespace Drupal\\${1:MODULE}\Plugin\facets\processor;
 
@@ -80,7 +80,7 @@ class ${TM_FILENAME/(\w+)\.php/\1/g} extends ProcessorPluginBase implements Buil
 }
 
 ]]></content>
-    <tabTrigger>d8processor_facets_</tabTrigger>
-    <scope>source.php</scope>
-    <description>D8 processor facets</description>
+  <tabTrigger>d8processor_facets_</tabTrigger>
+  <scope>source.php</scope>
+  <description>D8 processor facets</description>
 </snippet>

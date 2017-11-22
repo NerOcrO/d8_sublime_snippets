@@ -1,5 +1,5 @@
 <snippet>
-    <content><![CDATA[
+  <content><![CDATA[
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 
   /**
@@ -19,7 +19,7 @@ use Drupal\Core\Entity\EntityTypeManagerInterface;
 
       \$container->get('entity_type.manager')
 ]]></content>
-    <tabTrigger>sentity_type_manager</tabTrigger>
-    <scope>source.php</scope>
-    <description>D8 service entityTypeManager</description>
+  <tabTrigger>sentity_type_manager</tabTrigger>
+  <scope>source.php</scope>
+  <description>D8 service entityTypeManager</description>
 </snippet>

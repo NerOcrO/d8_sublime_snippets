@@ -1,5 +1,5 @@
 <snippet>
-    <content><![CDATA[
+  <content><![CDATA[
     \$nids = \Drupal::entityQuery('node')
       ->condition('type', 'publication')
       ->condition('status', NODE_PUBLISHED)
@@ -20,7 +20,7 @@
       \$items = \$entity_type_manager->getViewBuilder(\$entity_type)->viewMultiple(\$entities, \$view_mode);
     }
 ]]></content>
-    <tabTrigger>efq</tabTrigger>
-    <scope>source.php</scope>
-    <description>D8 EFQ</description>
+  <tabTrigger>efq</tabTrigger>
+  <scope>source.php</scope>
+  <description>D8 EFQ</description>
 </snippet>

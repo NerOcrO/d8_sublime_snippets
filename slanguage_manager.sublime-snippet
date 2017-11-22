@@ -1,5 +1,5 @@
 <snippet>
-    <content><![CDATA[
+  <content><![CDATA[
 use Drupal\Core\Language\LanguageManagerInterface;
 
   /**
@@ -19,7 +19,7 @@ use Drupal\Core\Language\LanguageManagerInterface;
 
       \$container->get('language_manager')
 ]]></content>
-    <tabTrigger>slanguage_manager</tabTrigger>
-    <scope>source.php</scope>
-    <description>D8 service LanguageManager</description>
+  <tabTrigger>slanguage_manager</tabTrigger>
+  <scope>source.php</scope>
+  <description>D8 service LanguageManager</description>
 </snippet>

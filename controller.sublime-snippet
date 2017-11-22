@@ -1,5 +1,5 @@
 <snippet>
-    <content><![CDATA[
+  <content><![CDATA[
 
 namespace Drupal\\${1:MODULE}\Controller;
 
@@ -54,7 +54,7 @@ class ${TM_FILENAME/(\w+)\.php/\1/g} implements ContainerInjectionInterface {
 }
 
 ]]></content>
-    <tabTrigger>d8controller</tabTrigger>
-    <scope>source.php</scope>
-    <description>D8 controller</description>
+  <tabTrigger>d8controller</tabTrigger>
+  <scope>source.php</scope>
+  <description>D8 controller</description>
 </snippet>

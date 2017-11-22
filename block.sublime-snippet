@@ -1,5 +1,5 @@
 <snippet>
-    <content><![CDATA[
+  <content><![CDATA[
 
 namespace Drupal\\${1:MODULE}\Plugin\Block;
 
@@ -62,7 +62,7 @@ class ${TM_FILENAME/(\w+)\.php/\1/g} extends BlockBase implements ContainerFacto
 }
 
 ]]></content>
-    <tabTrigger>d8block</tabTrigger>
-    <scope>source.php</scope>
-    <description>D8 block</description>
+  <tabTrigger>d8block</tabTrigger>
+  <scope>source.php</scope>
+  <description>D8 block</description>
 </snippet>

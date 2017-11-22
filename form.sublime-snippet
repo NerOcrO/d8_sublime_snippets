@@ -1,5 +1,5 @@
 <snippet>
-    <content><![CDATA[
+  <content><![CDATA[
 
 namespace Drupal\\${1:MODULE}\Form;
 
@@ -72,7 +72,7 @@ class ${TM_FILENAME/(\w+)\.php/\1/g} implements FormInterface, ContainerInjectio
 
 
 ]]></content>
-    <tabTrigger>d8form</tabTrigger>
-    <scope>source.php</scope>
-    <description>D8 form</description>
+  <tabTrigger>d8form</tabTrigger>
+  <scope>source.php</scope>
+  <description>D8 form</description>
 </snippet>

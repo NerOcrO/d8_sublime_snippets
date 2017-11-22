@@ -1,5 +1,5 @@
 <snippet>
-    <content><![CDATA[
+  <content><![CDATA[
 use Drupal\Core\State\StateInterface;
 
   /**
@@ -19,7 +19,7 @@ use Drupal\Core\State\StateInterface;
 
       \$container->get('state')
 ]]></content>
-    <tabTrigger>sstate</tabTrigger>
-    <scope>source.php</scope>
-    <description>D8 service State</description>
+  <tabTrigger>sstate</tabTrigger>
+  <scope>source.php</scope>
+  <description>D8 service State</description>
 </snippet>

@@ -1,5 +1,5 @@
 <snippet>
-    <content><![CDATA[
+  <content><![CDATA[
 use Drupal\Core\Form\FormBuilderInterface;
 
   /**
@@ -19,7 +19,7 @@ use Drupal\Core\Form\FormBuilderInterface;
 
       \$container->get('form_builder')
 ]]></content>
-    <tabTrigger>sform_builder</tabTrigger>
-    <scope>source.php</scope>
-    <description>D8 service FormBuilder</description>
+  <tabTrigger>sform_builder</tabTrigger>
+  <scope>source.php</scope>
+  <description>D8 service FormBuilder</description>
 </snippet>

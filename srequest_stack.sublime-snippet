@@ -1,5 +1,5 @@
 <snippet>
-    <content><![CDATA[
+  <content><![CDATA[
 use Symfony\Component\HttpFoundation\RequestStack;
 
   /**
@@ -19,7 +19,7 @@ use Symfony\Component\HttpFoundation\RequestStack;
 
       \$container->get('request_stack')
 ]]></content>
-    <tabTrigger>srequest_stack</tabTrigger>
-    <scope>source.php</scope>
-    <description>D8 service RequestStack</description>
+  <tabTrigger>srequest_stack</tabTrigger>
+  <scope>source.php</scope>
+  <description>D8 service RequestStack</description>
 </snippet>

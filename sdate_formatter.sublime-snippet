@@ -1,5 +1,5 @@
 <snippet>
-    <content><![CDATA[
+  <content><![CDATA[
 use Drupal\Core\Datetime\DateFormatterInterface;
 
   /**
@@ -19,7 +19,7 @@ use Drupal\Core\Datetime\DateFormatterInterface;
 
       \$container->get('date.formatter')
 ]]></content>
-    <tabTrigger>sdate_formatter</tabTrigger>
-    <scope>source.php</scope>
-    <description>D8 service dateFormatter</description>
+  <tabTrigger>sdate_formatter</tabTrigger>
+  <scope>source.php</scope>
+  <description>D8 service dateFormatter</description>
 </snippet>
