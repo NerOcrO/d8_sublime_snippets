@@ -3,7 +3,7 @@
 use Drupal\Core\Datetime\DateFormatterInterface;
 
   /**
-   * The date formatter.
+   * The date formatter service.
    *
    * @var \Drupal\Core\Datetime\DateFormatterInterface
    */
@@ -11,7 +11,7 @@ use Drupal\Core\Datetime\DateFormatterInterface;
 
   /**
    * @param \Drupal\Core\Datetime\DateFormatterInterface \$date_formatter
-   *   The date formatter.
+   *   The date formatter service.
    */
   public function __construct(DateFormatterInterface \$date_formatter) {
     \$this->renderer = \$renderer;

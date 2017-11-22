@@ -3,7 +3,7 @@
 use Drupal\Core\Language\LanguageManagerInterface;
 
   /**
-   * The language manager.
+   * The language manager service.
    *
    * @var \Drupal\Core\Language\LanguageManagerInterface
    */
@@ -11,7 +11,7 @@ use Drupal\Core\Language\LanguageManagerInterface;
 
   /**
    * @param \Drupal\Core\Language\LanguageManagerInterface \$language_manager
-   *   The language manager.
+   *   The language manager service.
    */
   public function __construct(LanguageManagerInterface \$language_manager) {
     \$this->languageManager = \$language_manager;

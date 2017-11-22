@@ -3,7 +3,7 @@
 use Drupal\Core\Form\FormBuilderInterface;
 
   /**
-   * The form builder.
+   * The form builder service.
    *
    * @var \Drupal\Core\Form\FormBuilderInterface
    */
@@ -11,7 +11,7 @@ use Drupal\Core\Form\FormBuilderInterface;
 
   /**
    * @param \Drupal\Core\Form\FormBuilderInterface \$form_builder
-   *   The form builder.
+   *   The form builder service.
    */
   public function __construct(FormBuilderInterface \$form_builder) {
     \$this->formBuilder = \$form_builder;

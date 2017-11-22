@@ -3,7 +3,7 @@
 use Drupal\Core\State\StateInterface;
 
   /**
-   * The state.
+   * The state service.
    *
    * @var \Drupal\Core\State\StateInterface
    */
@@ -11,7 +11,7 @@ use Drupal\Core\State\StateInterface;
 
   /**
    * @param \Drupal\Core\State\StateInterface \$state
-   *   The state.
+   *   The state service.
    */
   public function __construct(StateInterface \$state) {
     \$this->state = \$state;

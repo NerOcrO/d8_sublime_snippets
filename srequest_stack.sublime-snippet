@@ -3,7 +3,7 @@
 use Symfony\Component\HttpFoundation\RequestStack;
 
   /**
-   * The request stack.
+   * The request stack service.
    *
    * @var \Symfony\Component\HttpFoundation\RequestStack
    */
@@ -11,7 +11,7 @@ use Symfony\Component\HttpFoundation\RequestStack;
 
   /**
    * @param \Symfony\Component\HttpFoundation\RequestStack \$request
-   *   The request stack.
+   *   The request stack service.
    */
   public function __construct(RequestStack \$request) {
     \$this->request = \$request;

@@ -3,7 +3,7 @@
 use Drupal\Core\Routing\RouteMatchInterface;
 
   /**
-   * The current route match.
+   * The current route match service.
    *
    * @var \Drupal\Core\Routing\RouteMatchInterface
    */
@@ -11,7 +11,7 @@ use Drupal\Core\Routing\RouteMatchInterface;
 
   /**
    * @param \Drupal\Core\Routing\RouteMatchInterface \$current_route_match
-   *   The current route match.
+   *   The current route match service.
    */
   public function __construct(RouteMatchInterface \$current_route_match) {
     \$this->currentRouteMatch = \$current_route_match;
