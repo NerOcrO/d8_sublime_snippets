@@ -5,7 +5,10 @@ use Drupal\Core\Url;
         '#type' => 'link',
         '#title' => \$this->t(''),
         // '#title' => ['#markup' => [HTML]], // in case of HTML content
-        '#url' => Url::fromUri('XXX'),
+        '#url' => Url::fromUri|Route('XXX'),
+        '#attributes' => [
+          'rel' => ['author|search|external|noopener|tag'],
+        ],
       ],
 ]]></content>
   <tabTrigger>tlink</tabTrigger>
