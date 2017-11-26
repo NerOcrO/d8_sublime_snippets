@@ -1,0 +1,21 @@
+<snippet>
+  <content><![CDATA[
+use Drupal\Core\StringTranslation\StringTranslationTrait;
+use Drupal\Core\StringTranslation\TranslationInterface;
+
+  use StringTranslationTrait;
+
+  /**
+   * @param \Drupal\Core\StringTranslation\TranslationInterface \$string_translation
+   *   The string translation service.
+   */
+  public function __construct(TranslationInterface \$string_translation) {
+    \$this->stringTranslation = \$string_translation;
+  }
+
+      \$container->get('string_translation')
+]]></content>
+  <tabTrigger>sstring_translation</tabTrigger>
+  <scope>source.php</scope>
+  <description>D8 service Translation</description>
+</snippet>
