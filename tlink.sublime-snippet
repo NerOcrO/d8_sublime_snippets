@@ -7,7 +7,7 @@ use Drupal\Core\Url;
         // '#title' => ['#markup' => [HTML]], // in case of HTML content
         '#url' => Url::fromUri|Route('XXX'),
         '#attributes' => [
-          'rel' => ['author|search|external|noopener|tag'],
+          'rel' => ['bookmark|author|search|external|noopener|tag'],
         ],
       ],
 ]]></content>
