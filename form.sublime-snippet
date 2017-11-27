@@ -7,6 +7,7 @@ use Drupal\Core\DependencyInjection\ContainerInjectionInterface;
 use Drupal\Core\Form\FormInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\StringTranslation\StringTranslationTrait;
+use Drupal\Core\StringTranslation\TranslationInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
@@ -26,11 +27,11 @@ class ${TM_FILENAME/(\w+)\.php/\1/g} implements FormInterface, ContainerInjectio
   /**
    * Constructs a form instance.
    *
-   * @param \Drupal\Core\Language\LanguageManagerInterface \$language_manager
-   *   The language manager service.
+   * @param \Drupal\Core\StringTranslation\TranslationInterface \$string_translation
+   *   The string translation service.
    */
-  public function __construct(LanguageManagerInterface \$language_manager) {
-    \$this->languageManager = \$language_manager;
+  public function __construct(TranslationInterface \$string_translation) {
+    \$this->stringTranslation = \$string_translation;
   }
 
   /**
@@ -38,7 +39,7 @@ class ${TM_FILENAME/(\w+)\.php/\1/g} implements FormInterface, ContainerInjectio
    */
   public static function create(ContainerInterface \$container) {
     return new static(
-      \$container->get('language_manager')
+      \$container->get('string_translation')
     );
   }
 
@@ -60,7 +61,7 @@ class ${TM_FILENAME/(\w+)\.php/\1/g} implements FormInterface, ContainerInjectio
   /**
    * {@inheritdoc}
    */
-  public function validateForm(array &$form, FormStateInterface $form_state) {}
+  public function validateForm(array &\$form, FormStateInterface \$form_state) {}
 
   /**
    * {@inheritdoc}
