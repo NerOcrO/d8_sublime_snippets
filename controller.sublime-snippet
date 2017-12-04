@@ -16,13 +16,6 @@ class ${TM_FILENAME/(\w+)\.php/\1/g} implements ContainerInjectionInterface {
   use StringTranslationTrait;
 
   /**
-   * The language manager service.
-   *
-   * @var \Drupal\Core\Language\LanguageManagerInterface
-   */
-  protected \$languageManager;
-
-  /**
    * Constructs a controller instance.
    *
    * @param \Drupal\Core\StringTranslation\TranslationInterface \$string_translation
