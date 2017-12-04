@@ -45,7 +45,7 @@ class ${TM_FILENAME/(\w+)\.php/\1/g} implements ContainerInjectionInterface {
    * [DESCRIPTION].
    *
    * @return array
-   *   Tableau contenant le markup.
+   *   Tableau de rendu.
    */
   public function build() {
 
