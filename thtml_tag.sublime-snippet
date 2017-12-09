@@ -1,13 +1,13 @@
 <snippet>
   <content><![CDATA[
-      'html_tag' => [
-        '#type' => 'html_tag',
-        '#tag' => 'p',
-        '#value' => \$this->t(''),
-        '#attributes' => [
-          'class' => ['class1'],
-        ],
-      ],
+'html_tag' => [
+  '#type' => 'html_tag',
+  '#tag' => 'p',
+  '#value' => \$this->t(''),
+  '#attributes' => [
+    'class' => ['class1'],
+  ],
+],
 ]]></content>
   <tabTrigger>thtml_tag</tabTrigger>
   <scope>source.php</scope>

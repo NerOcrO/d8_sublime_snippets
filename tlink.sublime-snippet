@@ -1,15 +1,15 @@
 <snippet>
   <content><![CDATA[
 use Drupal\Core\Url;
-      'link' => [
-        '#type' => 'link',
-        '#title' => \$this->t(''),
-        // '#title' => ['#markup' => [HTML]], // in case of HTML content
-        '#url' => Url::fromUri|Route('XXX'),
-        '#attributes' => [
-          'rel' => ['bookmark|author|search|external|noopener|tag'],
-        ],
-      ],
+'link' => [
+  '#type' => 'link',
+  '#title' => \$this->t(''),
+  // '#title' => ['#markup' => [HTML]], // in case of HTML content
+  '#url' => Url::fromUri|Route('XXX'),
+  '#attributes' => [
+    'rel' => ['bookmark|author|search|external|noopener|tag'],
+  ],
+],
 ]]></content>
   <tabTrigger>tlink</tabTrigger>
   <scope>source.php</scope>
