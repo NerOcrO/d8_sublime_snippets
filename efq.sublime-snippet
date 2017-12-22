@@ -1,7 +1,7 @@
 <snippet>
   <content><![CDATA[
-    \$nids = \Drupal::entityQuery('node')
-      ->condition('type', 'publication')
+    \$nids = \Drupal::entityTypeManager()->getStorage('node')->getQuery()
+      ->condition('type', 'article')
       ->condition('status', NODE_PUBLISHED)
       ->condition('promote', NODE_PROMOTED)
       // Choisir un chemin "long" quand c'est un champ à plusieurs valeurs genre date range : field_date.value1 ou field_date.value2
@@ -16,7 +16,7 @@
     if (!empty(\$nids)) {
       /** @var \Drupal\Core\Entity\EntityTypeManagerInterface \$entity_type_manager */
       \$entity_type_manager = \Drupal::entityTypeManager();
-      \$entities = \$entity_type_manager->getStorage(\$entity_type)->loadMultiple(\$ids);
+      \$entities = \$entity_type_manager->getStorage(\$entity_type)->loadMultiple(\$nids);
       \$items = \$entity_type_manager->getViewBuilder(\$entity_type)->viewMultiple(\$entities, \$view_mode);
     }
 ]]></content>
