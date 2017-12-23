@@ -62,7 +62,7 @@ class ${TM_FILENAME/(\w+)\.php/\1/g} extends BlockBase implements ContainerFacto
 }
 
 ]]></content>
-  <tabTrigger>d8block</tabTrigger>
+  <tabTrigger>block</tabTrigger>
   <scope>source.php</scope>
   <description>D8 block</description>
 </snippet>

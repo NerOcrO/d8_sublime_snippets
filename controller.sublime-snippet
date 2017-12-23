@@ -48,7 +48,7 @@ class ${TM_FILENAME/(\w+)\.php/\1/g} implements ContainerInjectionInterface {
 }
 
 ]]></content>
-  <tabTrigger>d8controller</tabTrigger>
+  <tabTrigger>controller</tabTrigger>
   <scope>source.php</scope>
   <description>D8 controller</description>
 </snippet>

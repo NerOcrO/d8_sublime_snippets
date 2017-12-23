@@ -88,7 +88,7 @@ class ${TM_FILENAME/(\w+)\.php/\1/g} extends SortProcessorPluginBase implements 
 }
 
 ]]></content>
-  <tabTrigger>d8processor_facets_sort</tabTrigger>
+  <tabTrigger>processor_facets_sort</tabTrigger>
   <scope>source.php</scope>
   <description>D8 processor facets sort</description>
 </snippet>

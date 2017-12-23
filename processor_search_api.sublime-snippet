@@ -87,7 +87,7 @@ class ${TM_FILENAME/(\w+)\.php/\1/g} extends ProcessorPluginBase implements Cont
 }
 
 ]]></content>
-  <tabTrigger>d8processor_search_api</tabTrigger>
+  <tabTrigger>processor_search_api</tabTrigger>
   <scope>source.php</scope>
   <description>D8 processor search_api</description>
 </snippet>

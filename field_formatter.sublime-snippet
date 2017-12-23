@@ -107,7 +107,7 @@ class ${TM_FILENAME/(\w+)\.php/\1/g} extends FormatterBase implements ContainerF
 }
 
 ]]></content>
-  <tabTrigger>d8field_formatter</tabTrigger>
+  <tabTrigger>field_formatter</tabTrigger>
   <scope>source.php</scope>
   <description>D8 field formatter</description>
 </snippet>

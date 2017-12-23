@@ -18,7 +18,7 @@ class ${TM_FILENAME/(\w+)\.php/\1/g} {
 }
 
 ]]></content>
-  <tabTrigger>d8service</tabTrigger>
+  <tabTrigger>service</tabTrigger>
   <scope>source.php</scope>
   <description>D8 service</description>
 </snippet>
