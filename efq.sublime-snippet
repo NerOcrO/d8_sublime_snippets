@@ -1,24 +1,34 @@
 <snippet>
   <content><![CDATA[
-    \$nids = \Drupal::entityTypeManager()->getStorage('node')->getQuery()
-      ->condition('type', 'article')
-      ->condition('status', NODE_PUBLISHED)
-      ->condition('promote', NODE_PROMOTED)
-      // Choisir un chemin "long" quand c'est un champ à plusieurs valeurs genre date range : field_date.value1 ou field_date.value2
-      ->condition('field_public', \$tids, 'IN')
-      ->condition('field_articles', \$nid)
-      ->condition('field_date_debut_fin', gmdate('Y-m-d'), '<=')
-      ->sort('created', 'DESC')
-      ->range(0, 10)
-      ->pager(5)
-      ->execute();
+use Drupal\node\NodeInterface;
 
-    if (!empty(\$nids)) {
-      /** @var \Drupal\Core\Entity\EntityTypeManagerInterface \$entity_type_manager */
-      \$entity_type_manager = \Drupal::entityTypeManager();
-      \$entities = \$entity_type_manager->getStorage(\$entity_type)->loadMultiple(\$nids);
-      \$items = \$entity_type_manager->getViewBuilder(\$entity_type)->viewMultiple(\$entities, \$view_mode);
-    }
+/** @var \Drupal\Core\Entity\EntityTypeManagerInterface \$entity_type_manager */
+// \$entity_type_manager = \Drupal::entityTypeManager();
+\$entity_type_manager = \$this->entityTypeManager;
+/** @var \Drupal\node\NodeStorageInterface \$node_storage */
+\$node_storage = \$entity_type_manager->getStorage('node');
+\$langcode = \$this->languageManager->getCurrentLanguage()->getId();
+
+\$nids = \$node_storage->getQuery()
+  ->condition('status', NodeInterface::NODE_PUBLISHED)
+  ->condition('promote', NodeInterface::NODE_PROMOTED)
+  ->condition('type', 'article')
+  ->condition('langcode', \$langcode)
+  // Choisir un chemin "long" quand c'est un champ à plusieurs valeurs genre date range : field_date.value1 ou field_date.value2
+  ->condition('field_public', \$tids, 'IN')
+  ->condition('field_articles', \$nid)
+  ->condition('field_date_debut_fin', gmdate('Y-m-d'), '<=')
+  ->sort('created', 'DESC')
+  ->range(0, 10)
+  ->pager(5)
+  ->execute();
+
+if (empty(\$nids)) {
+  return [];
+}
+
+\$nodes = \$node_storage->loadMultiple(\$nids);
+\$build = \$entity_type_manager->getViewBuilder('node')->viewMultiple(\$nodes, \$view_mode);
 ]]></content>
   <tabTrigger>efq</tabTrigger>
   <scope>source.php</scope>
