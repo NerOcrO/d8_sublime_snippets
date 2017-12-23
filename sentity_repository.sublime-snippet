@@ -1,0 +1,25 @@
+<snippet>
+  <content><![CDATA[
+use Drupal\Core\Entity\EntityRepositoryInterface;
+
+  /**
+   * The entity repository service.
+   *
+   * @var \Drupal\Core\Entity\EntityRepositoryInterface
+   */
+  protected \$entityRepository;
+
+  /**
+   * @param \Drupal\Core\Entity\EntityRepositoryInterface $entity_repository
+   *   The entity repository service.
+   */
+  public function __construct(EntityRepositoryInterface $entity_repository) {
+    \$this->entityRepository = \$entity_repository;
+  }
+
+      \$container->get('entity.repository')
+]]></content>
+  <tabTrigger>sentity_repository</tabTrigger>
+  <scope>source.php</scope>
+  <description>D8 service entityRepository</description>
+</snippet>
