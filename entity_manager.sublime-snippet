@@ -1,0 +1,16 @@
+<snippet>
+  <content><![CDATA[
+/** @var \Drupal\Core\Entity\EntityTypeManagerInterface \$entity_type_manager */
+// \$entity_type_manager = \Drupal::entityTypeManager();
+\$entity_type_manager = \$this->entityTypeManager;
+/** @var \Drupal\node\NodeStorageInterface \$node_storage */
+\$node_storage = \$entity_type_manager->getStorage('node');
+\$node = \$node_storage->load(\$nid);
+// Prendre la traduction de la langue en cours.
+// \$node = \$this->entityRepository->getTranslationFromContext(\$node);
+\$build = \$entity_type_manager->getViewBuilder('node')->view(\$node, \$view_mode);
+]]></content>
+  <tabTrigger>entity_manager</tabTrigger>
+  <scope>source.php</scope>
+  <description>D8 Entity manager</description>
+</snippet>
