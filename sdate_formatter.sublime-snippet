@@ -14,7 +14,7 @@ use Drupal\Core\Datetime\DateFormatterInterface;
    *   The date formatter service.
    */
   public function __construct(DateFormatterInterface \$date_formatter) {
-    \$this->renderer = \$renderer;
+    \$this->dateFormatter = \$date_formatter;
   }
 
       \$container->get('date.formatter')
