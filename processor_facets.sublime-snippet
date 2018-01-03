@@ -66,7 +66,7 @@ class ${TM_FILENAME/(\w+)\.php/\1/g} extends ProcessorPluginBase implements Buil
   public function build(FacetInterface \$facet, array \$results) {
     /** @var \Drupal\facets\Result\ResultInterface \$result */
     foreach (\$results as \$result) {
-      /** @var Drupal\taxonomy\TermInterface \$term */
+      /** @var \Drupal\taxonomy\TermInterface \$term */
       \$term = \$this->entityTypeManager->getStorage('taxonomy_term')->load(\$result->getRawValue());
 
       if (\$term) {

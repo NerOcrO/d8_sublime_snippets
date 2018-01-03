@@ -74,9 +74,9 @@ class ${TM_FILENAME/(\w+)\.php/\1/g} extends SortProcessorPluginBase implements 
   public function sortResults(Result \$a, Result \$b) {
     \$storage = \$this->entityTypeManager->getStorage('taxonomy_term');
 
-    /** @var Drupal\taxonomy\TermInterface \$term_a */
+    /** @var \Drupal\taxonomy\TermInterface \$term_a */
     \$term_a = \$storage->load(\$a->getRawValue());
-    /** @var Drupal\taxonomy\TermInterface \$term_b */
+    /** @var \Drupal\taxonomy\TermInterface \$term_b */
     \$term_b = \$storage->load(\$b->getRawValue());
 
     if (\$term_a->field_poids->value == \$term_b->field_poids->value) {
