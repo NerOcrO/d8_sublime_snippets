@@ -10,8 +10,8 @@ use Drupal\node\NodeInterface;
 \$langcode = \$this->languageManager->getCurrentLanguage()->getId();
 
 \$nids = \$node_storage->getQuery()
-  ->condition('status', NodeInterface::NODE_PUBLISHED)
-  ->condition('promote', NodeInterface::NODE_PROMOTED)
+  ->condition('status', NodeInterface::PUBLISHED)
+  ->condition('promote', NodeInterface::PROMOTED)
   ->condition('type', 'article')
   ->condition('langcode', \$langcode)
   // Choisir un chemin "long" quand c'est un champ à plusieurs valeurs genre date range : field_date.value1 ou field_date.value2
